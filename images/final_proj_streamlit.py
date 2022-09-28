@@ -197,12 +197,12 @@ st.sidebar.title(s)
 
 
 
-iron_hack=Image.open(r".\logo_!.png")
+iron_hack=Image.open(r"/images/logo_!.png")
 
 
 
 
-iron_hack=Image.open(r".\logo_!.png")
+iron_hack=Image.open(r"./images/logo_!.png")
 
 
 st.image(iron_hack,width=600)
@@ -218,7 +218,7 @@ st.header("")
 st.header(" ")
 st.header("")
 st.header(" ")
-business_case_slide=Image.open(r".\business_case_slide.png")
+business_case_slide=Image.open(r"./images/business_case_slide.png")
 
 
 st.image(business_case_slide,width=1000)
@@ -227,7 +227,7 @@ st.header(" ")
 st.header("")
 st.header(" ")
 st.header("")
-plan=Image.open(r".\plan.png")
+plan=Image.open(r"./images/plan.png")
 
 
 st.image(plan,width=1000)
@@ -239,10 +239,10 @@ st.header(" ")
 st.header("")
 st.header('1- Data collection')
 st.write('Scrapping titles from article websites')
-data_collect=Image.open(r".\get_urls.png")
+data_collect=Image.open(r"./images/get_urls.png")
 st.image(data_collect,width=1000)
 
-data_collect=Image.open(r".\data_frame_titles.png")
+data_collect=Image.open(r"./images/data_frame_titles.png")
 st.image(data_collect,width=1000)
 
 st.header(" ")
@@ -250,29 +250,29 @@ st.header("")
 st.header(" ")
 st.header("")
 st.title('2- Data cleaning')
-cleaning_titles_ppt=Image.open(r".\cleaning_titles.png")
+cleaning_titles_ppt=Image.open(r"./images/cleaning_titles.png")
 st.image(cleaning_titles_ppt,width=1000)
 
 
 
 st.header('Clean up')
-clean_up=Image.open(r".\clean_up.png")
+clean_up=Image.open(r"./images/clean_up.png")
 st.image(clean_up,width=1000)
 st.header("")
 st.header('Tokenization')
-tokenize=Image.open(r".\tokenize.png")
+tokenize=Image.open(r"./images/tokenize.png")
 st.image(tokenize,width=1000)
 st.header("")    
 st.header('Removing caps')
-remove_caps=Image.open(r".\remove_caps.png")
+remove_caps=Image.open(r"./images/remove_caps.png")
 st.image(remove_caps,width=1000)
 st.header("")    
 st.header('Stemming and lemming')
-stemm_lemm=Image.open(r".\stemm_lemm.png")
+stemm_lemm=Image.open(r"./images/stemm_lemm.png")
 st.image(stemm_lemm,width=1000)
 st.header("")    
 st.header('Removing stop words and joining')
-stop_join=Image.open(r".\stop_join.png")
+stop_join=Image.open(r"./images/stop_join.png")
 st.image(stop_join,width=1000)
 ###########################################################################
 alpha2=[country.alpha_2 for country in pycountry.countries ]
@@ -348,7 +348,7 @@ def joining(s):
     s=" ".join(s)
     return s
 st.title('3- EDA')
-df=pd.read_csv(r"./sources.csv")
+df=pd.read_csv(r"./images/sources.csv")
 df['title_eda']=df['Title']
 df['title_eda']=df['title_eda'].apply(clean_up)
 df['title_eda']=df['title_eda'].apply(tokenize)
@@ -483,7 +483,7 @@ st.header('Risky investments word cloud')
 # Create a word cloud image
 #wordcloud = WordCloud(background_color="white", max_words=1000,
                #contour_width=3, contour_color='black').generate(wcloud_words)
-risky_cloud=Image.open(r".\risky_cloud.png")
+risky_cloud=Image.open(r"./images/risky_cloud.png")
 
 
 st.image(risky_cloud,width=600)
@@ -492,7 +492,7 @@ st.header(" ")
 st.header('Safe investments word cloud')
 
 
-safe_cloud=Image.open(r".\safe_cloud.png")
+safe_cloud=Image.open(r"./images/safe_cloud.png")
 
 
 st.image(safe_cloud,width=600)
@@ -505,21 +505,21 @@ st.header(" ")
 st.title('4- Building the SQL database')
 st.header("")    
 
-sql_comp=Image.open(r".\SQL comp.png")
+sql_comp=Image.open(r"./images/SQL comp.png")
 st.image(sql_comp,width=1000)
 
 
 
 
 st.header("") 
-erd_code=Image.open(r".\erd_code.png")
+erd_code=Image.open(r"./images/erd_code.png")
 st.image(erd_code,width=1000)
 
 
 
 
 st.header("") 
-sql_queries=Image.open(r".\sql_queries.png")
+sql_queries=Image.open(r"./images/sql_queries.png")
 st.image(sql_queries,width=1000)
 
 
@@ -529,11 +529,11 @@ st.header("")
 st.title('5- Machine learning')
 
 st.header("") 
-ml_class=Image.open(r".\ml_class.png")
+ml_class=Image.open(r"./images/ml_class.png")
 st.image(ml_class,width=1000)
 
 st.header("") 
-comp_class=Image.open(r".\comp_class.png")
+comp_class=Image.open(r"./images/comp_class.png")
 st.image(comp_class,width=1000)
 
 
@@ -548,7 +548,7 @@ st.image(comp_class,width=1000)
 
 
 
-df=pd.read_csv(r".\cleaned_data.csv")
+df=pd.read_csv(r"./images/cleaned_data.csv")
 
 x=df['cleaned_title']
 y=df['Risk']
