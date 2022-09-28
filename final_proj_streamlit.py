@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import seaborn as sns 
-from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from wordcloud import STOPWORDS
 from sklearn.metrics import mean_squared_error,confusion_matrix, precision_score, recall_score, auc,roc_curve
 import re
 import requests
@@ -474,37 +474,27 @@ st.write(fig)
 
 risky=df[df['Risk']==0]
 safe=df[df['Risk']==1]
-wcloud_words = " ".join(word for word in risky['title_eda'])
+#wcloud_words = " ".join(word for word in risky['title_eda'])
 st.header('Risky investments word cloud')
-pic = np.array(Image.open(requests.get('http://www.clker.com/cliparts/5/5/d/6/1194989754480445982tiger_graig_ryan_smith_-_01.svg.med.png',stream=True).raw))
+#pic = np.array(Image.open(requests.get('http://www.clker.com/cliparts/5/5/d/6/1194989754480445982tiger_graig_ryan_smith_-_01.svg.med.png',stream=True).raw))
 # Create a word cloud image
-wordcloud = WordCloud(background_color="white", max_words=1000,
-               contour_width=3, contour_color='black').generate(wcloud_words)
+#wordcloud = WordCloud(background_color="white", max_words=1000,
+               #contour_width=3, contour_color='black').generate(wcloud_words)
+risky_cloud=Image.open(r".\risky_cloud.png")
 
-plt.figure(figsize=[14,14])
 
-plt.imshow(wordcloud) 
-plt.axis("off") 
-plt.tight_layout(pad = 0)
-st.pyplot()
+st.image(risky_cloud,width=600)
 
 st.header(" ")
 st.header('Safe investments word cloud')
-wcloud_words = " ".join(word for word in safe['title_eda'])
 
-from PIL import Image
-import requests
-pic = np.array(Image.open(requests.get('http://www.clker.com/cliparts/5/5/d/6/1194989754480445982tiger_graig_ryan_smith_-_01.svg.med.png',stream=True).raw))
-# Create a word cloud image
-wordcloud = WordCloud(background_color="white", max_words=1000,
-               contour_width=3, contour_color='black').generate(wcloud_words)
-import matplotlib.pyplot as plt 
-plt.figure(figsize=[14,14])
 
-plt.imshow(wordcloud) 
-plt.axis("off") 
-plt.tight_layout(pad = 0) 
-st.pyplot()
+safe_cloud=Image.open(r".\safe_cloud.png")
+
+
+st.image(safe_cloud,width=600)
+
+
 
 
 st.header(" ")
