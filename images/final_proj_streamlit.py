@@ -11,6 +11,7 @@ import requests
 from sklearn import tree
 import streamlit as st
 import nltk
+nltk.download('punkt')
 from nltk.corpus import stopwords
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.feature_extraction.text import TfidfVectorizer
