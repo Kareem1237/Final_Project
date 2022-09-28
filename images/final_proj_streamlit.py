@@ -12,6 +12,8 @@ from sklearn import tree
 import streamlit as st
 import nltk
 nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 from nltk.corpus import stopwords
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.feature_extraction.text import TfidfVectorizer
