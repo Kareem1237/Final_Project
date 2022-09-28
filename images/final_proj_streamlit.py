@@ -39,7 +39,7 @@ from PIL import Image
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.sidebar.title('6- Insert a url of an article to check for riskiness 🔍')
 link=st.sidebar.text_input('URL','https://seekingalpha.com/news/3885328-ibm-to-acquire-texas-digital-product-development-consultancy?source=content_type%3Areact%7Cfirst_level_url%3Amarket-news%7Csection_asset%3Amain%7Csection%3Atechnology')
-df=pd.read_csv(r"./cleaned_data.csv")
+df=pd.read_csv(r"./images/cleaned_data.csv")
 
 x=df['cleaned_title']
 y=df['Risk']
