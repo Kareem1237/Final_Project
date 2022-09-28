@@ -14,3 +14,7 @@ yfinance
 patsy
 statsmodels
 wordcloud
+nltk
+bs4
+regex
+pycountry
