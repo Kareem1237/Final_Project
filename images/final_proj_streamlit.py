@@ -197,7 +197,7 @@ st.sidebar.title(s)
 
 
 
-iron_hack=Image.open(r"/images/logo_!.png")
+iron_hack=Image.open(r"/logo_!.png")
 
 
 
