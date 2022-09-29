@@ -202,7 +202,7 @@ iron_hack=Image.open(r"./logo_!.png")
 
 
 
-iron_hack=Image.open(r"./images/logo_!.png")
+#iron_hack=Image.open(r"./images/logo_!.png")
 
 
 st.image(iron_hack,width=600)
