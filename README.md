@@ -6,13 +6,13 @@ To do this, I have implemented the follwing steps:
 
 1) Collect articles' URL and scrape their titles 
 
-2)Clean the titles: removing symbols, punctuations, numbers
+2) Clean the titles: removing symbols, punctuations, numbers
 
-3)Tokenize and grammatical manipulation: Turn each title into a list and get the origin of each word.
+3) Tokenize and grammatical manipulation: Turn each title into a list and get the origin of each word.
 
 4) Vectorize each title into an array : As this is text, I used vectorization to turn each sentence into a weighted list of words in a matrix.
 
-5)Choose the best machine learning model and make predictions
+5) Choose the best machine learning model and make predictions
 
 
 
