@@ -1,6 +1,9 @@
 
 # Final Project: Predicting investment riskiness using article titles
 
+streamlit app link: 
+👉 https://kareem1237-final-project-final-proj-streamlit-m8dn3v.streamlitapp.com/ 👈
+
 For my final project, I used NLP (Natural Language Processing) and supervised machine learning to scrape, clean and build a model to evaluate whether an investment is risky depending on the news surrounding a company.
 To do this, I have implemented the follwing steps:
 
